@@ -1,5 +1,5 @@
 .admin-area {
-    background: #000;
+    background: rgba(4,9,30,0.85);
     color: white;
     height: 100vh;
   }
@@ -11,6 +11,12 @@
     cursor: pointer;
   }
   .admin-menu:hover {
-    color: blue;
+    color: #ef6c00;
+  }
+  .dashboard-title{
+    text-align: center;
+    color: #ef6c00;
+    margin-top: 20px;
+    font-weight: bold;
   }
   

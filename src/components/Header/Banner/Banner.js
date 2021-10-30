@@ -6,10 +6,10 @@ const Banner = () => {
         <div className="banner">
             <div className="banner-area">
             <div className="banner-text">
-                <p><small>DON’T LOOK FURTHER, THIS IS YOUR DOCTOR</small></p>
-                <h1>We Care <span>About Your Health</span></h1>
-                <p> <small>Your Health is Our Top Priority with Comprehensive, Affordable medical. We Provide Free Health Care Consultation <br /> We only provide good treatment with a good environment</small></p>
-                <button className="banner-btn">Learn More</button>
+                <p><small className="fw-bold">THE BESY TOUR EXPERIENCE</small></p>
+                <h1>Explore the Beauty of the Beautiful World</h1>
+                <p> <small>Curabitur nunc erat, consequat in erat ut, congue bibendum nulla. Suspendisse id pharetra lacus <br /> et hendrerit mi quis leo elementum.</small></p>
+                <button className="signIn-btn">Learn More</button>
             </div>
 
             </div>

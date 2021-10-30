@@ -4,13 +4,15 @@ import './HeaderMain.css';
 
 const HeaderMain = () => {
     return (
-        <div className="HeaderMain-container mt-4">
+        <div className="HeaderMain-container">
             <div className="container">
                 <div className="row g-2">
 
                     <div className="col-lg-3 col-md-6 col-12">
                         <div className="p-3 brand">
-                            <Link to="/"><h1 className="fw-bold">Travel<span> Ride</span> </h1></Link>
+                            <Link to="/"><div className="fw-bold">
+                                    <img src={'https://i.postimg.cc/FRL4QRST/logo-1.png'} alt="" />
+                                </div></Link>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 col-12  mt-md-4">

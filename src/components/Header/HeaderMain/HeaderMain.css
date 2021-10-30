@@ -1,5 +1,6 @@
 .HeaderMain-container{
     display: flex;
+    background-color: #ef6c00;
 }
 .HeaderMain-container i{
     color: #2f89fc;

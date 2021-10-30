@@ -25,7 +25,7 @@ const AddTour = () => {
 
     return (
         <div className="container mb-5 text-center mt-5">
-            <h1>Add a new Tour</h1>
+            <h4 className="fw-bold">Add a new Tour</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title")} placeholder="Title" className="p-2 m-2 w-50"/>
                 <br />

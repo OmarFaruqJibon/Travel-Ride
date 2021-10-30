@@ -1,5 +1,8 @@
 .coutses-title{
     margin-top:75px;
-    color: #1e78c1;
     font-weight: bold;
+    color: #000000;
+}
+.coutses-title span{
+    color: #ef6c00;
 }

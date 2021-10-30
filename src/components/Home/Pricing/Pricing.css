@@ -1,0 +1,38 @@
+.tour-title{
+    margin-top:75px;
+    font-weight: bolder;
+    color: #000000;
+    text-align: center;
+}
+.tour-title span{
+    color: #ef6c00;
+}
+.pricing-container{
+    box-shadow: 0 1px 11px rgb(0 0 0 / 15%);
+    padding: 45px 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.pricing-container:hover {
+    border: 1px solid #fc922f;
+}
+.pricing-container:hover button{
+    background-color: #fc922f;
+    border: 1px solid #e98527;
+}
+.pricing-container h1{
+    color: #fc922f;
+}
+.price{
+    color: #2f89fc;
+    font-weight: 600;
+    margin-bottom: 35px;
+    margin-top: 20px; 
+}
+.priceing-btn{
+    background-color: #ef6c00;
+    color: #fff;
+    padding: 4px 45px;
+    border: 1px solid #ef6c00;
+}

@@ -1,13 +1,51 @@
 .places-title{
     text-align: center;
     margin-bottom: 50px;
+    font-weight: 700;
+}
+.places-title h2{
+    font-weight: 800;
+}
+.places-title span{
+    color: #ef6c00;
 }
 .places-title h2{
     font-weight: 800;
 }
 .single-place-item{
-    box-shadow: 0 2px 10px rgb(0 0 0 / 15%);
+    box-shadow: 0 1px 11px rgb(0 0 0 / 15%);
     padding: 24px;
     text-align: center;
+    
+}
+.single-place-item:hover{
     border: 1px solid rgb(255, 115, 0);
+}
+
+.special-tour{
+        background-image: url('https://i.postimg.cc/kGpf8QFT/tour-1.jpg');
+        background-color: rgba(4, 9, 30, 0.746);
+        width: 100%;
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        height: 550px;
+        margin-bottom: 100px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.special-tour-text{
+    padding: 20px;
+}
+.special-tour-text span{
+    color: #ef6c00;
+    font-weight: bolder;
+}
+.special-tour-text h2{
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }

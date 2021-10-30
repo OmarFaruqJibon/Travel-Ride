@@ -6,7 +6,7 @@ import './Navbar.css';
 const Navbar = () => {
     const {user,handleSignOut} = useAuth();
     return (
-        <div className="nav-bg container">
+        <div className="nav-bg">
             <nav className="navbar navbar-expand-lg navbar-light container">
                 <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,18 +15,17 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarText">
                         <div className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <Link className="nav-item my-nav" to="/home">Home</Link>
-                                <Link className="nav-item my-nav" to="/tours">Tour</Link>
+                                <Link className="nav-item my-nav" to="/tours">Tours</Link>
                                 <Link className="nav-item my-nav" to="/admin">Admin</Link>
-                                {/* <Link className="nav-item my-nav" to="/addTour">Add Tour</Link> */}
                                 <Link className="nav-item my-nav" to="/about">About</Link>
                                 <Link className="nav-item my-nav" to="/contact">Contact</Link>
                         </div>
 
                         <span className="navbar-text">
                             {user.email ?
-                                <><i className="fas fa-user-circle me-2 text-light"></i><span className="text-light">{user.displayName} </span> <button onClick={handleSignOut} className="appointment-btn me-2">Sign Out</button>
+                                <><i className="fas fa-user-circle me-2 text-light"></i><span className="text-light">{user.displayName} </span> <button onClick={handleSignOut} className="signIn-btn me-2">Sign Out</button>
                                 </>:
-                                <Link to="/signIn"><button className="appointment-btn">Sign In</button></Link>
+                                <Link to="/signIn"><button className="signIn-btn">Sign In</button></Link>
                             }
                         </span>
                     </div>

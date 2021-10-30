@@ -1,11 +1,12 @@
 .nav-bg{
     background-color: rgba(4,9,30,0.85);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     margin-bottom: 10px;
 }
 .my-nav{
     padding-right: 40px;
 }
+
 .my-nav{
     color: #fff;
     text-decoration: none;
@@ -14,16 +15,16 @@
     color: #1e78c1;
 }
 
-.appointment-btn{
-    background: #1e78c1;
-    border: 1px solid #1e78c1;;
+.signIn-btn{
+    background: #ef6c00;
+    border: none;
     color: #fff;
     cursor: pointer;
     padding: 4px 27px;
     margin-left: 10px;
 }
-.appointment-btn:hover{
+.signIn-btn:hover{
     background-color:#fff;
-    border: 1px solid #17598f;
+    border: 1px solid #ef6c00;
     color: black;
 }

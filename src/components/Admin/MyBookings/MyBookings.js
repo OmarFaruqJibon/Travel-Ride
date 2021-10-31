@@ -19,13 +19,12 @@ const MyBookings = () => {
         fetch('https://rocky-headland-86423.herokuapp.com/bookings')
         .then(res=>res.json())
         .then(data=>{
-            const booking = Bookings.filter(book =>
-                
+            const booking = data.filter(book =>
                 book?.UserEmail === user.email
                 );
                 setBookings(booking);
         })
-    },[]);
+    },[user.email]);
 
 
     console.log('bookings : ',Bookings[0]?.UserEmail);

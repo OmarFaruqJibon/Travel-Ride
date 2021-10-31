@@ -12,6 +12,10 @@ const Navbar = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
+                    <div>
+                        <Link to="/"><img className="me-md-5" src={'https://i.postimg.cc/FRL4QRST/logo-1.png'} alt="" /></Link>
+                        
+                    </div>
                     <div className="collapse navbar-collapse" id="navbarText">
                         <div className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <Link className="nav-item my-nav" to="/home">Home</Link>
@@ -23,9 +27,9 @@ const Navbar = () => {
 
                         <span className="navbar-text">
                             {user.email ?
-                                <><i className="fas fa-user-circle me-2 text-light"></i><span className="text-light">{user.displayName} </span> <button onClick={handleSignOut} className="signIn-btn me-2">Sign Out</button>
+                                <><i className="fas fa-user-circle me-2 text-light"></i><span className="text-light">{user.displayName} </span> <button onClick={handleSignOut} className="nav-btn me-2">Sign Out</button>
                                 </>:
-                                <Link to="/signIn"><button className="signIn-btn">Sign In</button></Link>
+                                <Link to="/signIn"><button className="nav-btn">Sign In</button></Link>
                             }
                         </span>
                     </div>

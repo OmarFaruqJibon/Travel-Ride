@@ -10,10 +10,10 @@ const TourDetails = () => {
     const {tourId} = useParams();
     const {title, img, duration, description, price , rating} = tour;
     const {user} = useAuth();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register,reset, handleSubmit, formState: { errors } } = useForm();
 
     // booking information-------------------------------------------
-    const url = `http://localhost:5000/tourDetails/${tourId}`;
+    const url = `https://rocky-headland-86423.herokuapp.com/tourDetails/${tourId}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
@@ -23,14 +23,11 @@ const TourDetails = () => {
         })
     },[]);
 
-
 // user information-------------------------------------------
-
-    
     const onSubmit = data =>{
         console.log(data);
         data.bookingID = tourId;
-        fetch('http://localhost:5000/users',{
+        fetch('https://rocky-headland-86423.herokuapp.com/users',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
@@ -40,37 +37,34 @@ const TourDetails = () => {
         .then(res=>res.json())
         .then(result=>{
             console.log(result);
+            if(result.insertedId){
+                alert('Booking Successfully.');
+                reset();
+            }
         })
     }
-
-
-
-
-
-
 
     return (
         <div className="container">
             <div>
-                <h2>Booking Details</h2>
+                <h2 className=" fw-bold mt-5 mb-4">Tour Booking</h2>
                 <div className="row g-md-5">
                     <div className="col-md-6 col-12 p-3">
                         <img className="w-100" src={img} alt="" />
                     </div>
                     <div className="col-md-6 col-12 p-3">
-                        <h3>{title}</h3>
-                        <p><small>About Tour: {description}</small></p>
-                        <p><small>Duration: {duration}</small></p>
-                        <p><small>Rating: {rating}</small></p>
-                        <h5>$ {price}</h5>
+                        <h5><strong>{title}</strong></h5>
+                        <p><small><strong>About Tour:</strong> {description}</small></p>
+                        <p><small><strong>Duration:</strong> {duration}</small></p>
+                        <p><small><strong>Rating:</strong> {rating}</small></p>
+                        <h5><strong>$ {price}</strong> </h5>
                     </div>
                 </div>
             </div>
 
             <div className="container mb-5 text-center mt-5">
-            <h1>Add a new Tour</h1>
-            <form onSubmit={handleSubmit(onSubmit)}>
-
+            <h5 className=" fw-bold mt-5 mb-4">Your Personal Information</h5>
+            <form className="info-form" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("UserName")} placeholder="Name" className="p-2 m-2 w-50"/>
                 <br />
                 <input {...register("UserEmail" , { required: true })} value={user.email} className="p-2 m-2 w-50"/>
@@ -82,15 +76,9 @@ const TourDetails = () => {
                 
                 {errors.exampleRequired && <span>This field is required</span>}
                 
-                <input type="submit" value="ADD" className="btn btn-primary"/>
+                <input type="submit" value="Book" className="btn book-btn"/>
             </form>
         </div>
-
-
-
-
-
-
 
 
 

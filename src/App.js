@@ -1,7 +1,8 @@
 import { BrowserRouter , Switch, Route} from 'react-router-dom';
 import './App.css';
-import AddTour from './components/AddTour/AddTour';
+import AboutUs from './components/AboutUs/AboutUs';
 import Admin from './components/Admin/Admin';
+import ContactUs from './components/ContactUs/ContactUs';
 import AuthProvider from './components/context/authProvider';
 import Footer from './components/Footer/Footer';
 import Banner from './components/Header/Banner/Banner';
@@ -9,6 +10,7 @@ import HeaderMain from './components/Header/HeaderMain/HeaderMain';
 import Navbar from './components/Header/Navbar/Navbar';
 import Home from './components/Home/Home/Home';
 import TourPackages from './components/Home/TourPackages/TourPackages';
+import PrivateRoute from './components/SignIn/PrivateRoute/PrivateRoute';
 import SignIn from './components/SignIn/SignIn';
 import TourDetails from './components/TourDetails/TourDetails';
 
@@ -18,7 +20,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <HeaderMain></HeaderMain>
+          {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <Banner></Banner>
           <Home></Home>
@@ -26,7 +28,7 @@ function App() {
         </Route>
 
         <Route path="/home">
-          <HeaderMain></HeaderMain>
+          {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <Banner></Banner>
           <Home></Home>
@@ -34,13 +36,15 @@ function App() {
         </Route>
 
         <Route path="/about">
-          <HeaderMain></HeaderMain>
+          {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
+          <AboutUs></AboutUs>
           <Footer></Footer>
         </Route>
         <Route path="/contact">
           <HeaderMain></HeaderMain>
           <Navbar></Navbar>
+          <ContactUs></ContactUs>
           <Footer></Footer>
         </Route>
 
@@ -61,19 +65,19 @@ function App() {
         </Route>
 
 
-        <Route path="/admin">
+        <PrivateRoute path="/admin">
         <HeaderMain></HeaderMain>
           <Navbar></Navbar>
           <Admin></Admin>
           <Footer></Footer>
-        </Route>
+        </PrivateRoute>
 
-        <Route path="/tourDetails/:tourId">
+        <PrivateRoute path="/tourDetails/:tourId">
         <HeaderMain></HeaderMain>
           <Navbar></Navbar>
           <TourDetails></TourDetails>
           <Footer></Footer>
-        </Route>
+        </PrivateRoute>
 
 
 

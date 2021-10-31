@@ -8,7 +8,7 @@ const MyBookings = () => {
     const [Bookings, setBookings] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/users')
+        fetch('https://rocky-headland-86423.herokuapp.com/users')
         .then(res=>res.json())
         .then(data=>{
             setBookings(data);
@@ -16,7 +16,7 @@ const MyBookings = () => {
     },[]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/users')
+        fetch('https://rocky-headland-86423.herokuapp.com/users')
         .then(res=>res.json())
         .then(data=>{
             const booking = Bookings.filter(book =>
@@ -35,7 +35,7 @@ const handleDeleteBooking = id =>{
 }
     return (
         <div>
-           <h1> My Bookings </h1>
+           <h4 className="fw-bold mt-4 mb-5"> My Bookings</h4>
 
            <div className="m-md-4">
                 <div className="row g-4">

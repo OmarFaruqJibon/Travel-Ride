@@ -6,7 +6,7 @@ const Tour = (props) => {
     const {_id, title, img, duration, description, price , rating}=props.cors;
     console.log(_id);
     return (
-        <div className="col-md-3 col-6 mt-5">
+        <div className="col-md-4 col-6 mt-5">
             <div className="cart">
                 <div className="thumb">
                     <img src={img} alt="" />
@@ -21,7 +21,7 @@ const Tour = (props) => {
                         <p className="price"><small>$ {price}</small></p>
                     </div>
                    <div className="text-center">
-                   <Link to={`/tourDetails/${_id}`}><button className="btn detail-btn">Learn More</button></Link>
+                   <Link to={`/tourDetails/${_id}`}><button className="btn detail-btn">Book Now</button></Link>
                    </div>
                 </div>
             </div>

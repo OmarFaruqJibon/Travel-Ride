@@ -4,11 +4,11 @@ import useAuth from '../hooks/useAuth';
 
 const AddTour = () => {
     const {user} = useAuth();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data =>{
         console.log(data);
 
-        fetch('http://localhost:5000/addTour',{
+        fetch('https://rocky-headland-86423.herokuapp.com/addTour',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
@@ -21,12 +21,10 @@ const AddTour = () => {
         })
     }
 
-
-
     return (
         <div className="container mb-5 text-center mt-5">
             <h4 className="fw-bold">Add a new Tour</h4>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="info-form" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title")} placeholder="Title" className="p-2 m-2 w-50"/>
                 <br />
                 <input {...register("email" , { required: true })} value={user.email} className="p-2 m-2 w-50"/>
@@ -43,7 +41,7 @@ const AddTour = () => {
                 <br />
                 {errors.exampleRequired && <span>This field is required</span>}
                 
-                <input type="submit" value="ADD" className="btn btn-primary"/>
+                <input type="submit" value="Add Tour" className="btn book-btn"/>
             </form>
         </div>
     );

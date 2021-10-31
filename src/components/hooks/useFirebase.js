@@ -27,15 +27,7 @@ const useFirebase = () => {
 
     const googleSignIn = () =>{
         setIsLoading(true);
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const user = result.user;
-                setUser(user);
-                setError('');
-            }).catch((error) => {
-                const errorMessage = error.message;
-                setError(errorMessage);
-            }).finally(() => setIsLoading(false));
+        return signInWithPopup(auth, googleProvider);
     }
     const handleSignOut = () => {
         setIsLoading(true);

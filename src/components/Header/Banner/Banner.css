@@ -31,6 +31,11 @@
     margin-bottom: 34px;
     color: #fff;
 }
+.banner-text h5{
+    font-weight: 100;
+    margin-bottom: 24px;
+    color: #fff;
+}
 .banner-btn{
     background-color: #1e78c1;
     color: #fff;

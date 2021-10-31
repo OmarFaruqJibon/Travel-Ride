@@ -7,11 +7,11 @@ const HomeTop = () => {
         <div>
             <div className="container mb-5">
                 <div className="places-title">
-                    <h2>The <span>World</span> </h2>
-                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eum.</small></p>
+                    <h2 className="fw-bold">The <span>World</span> </h2>
+                    <p><small>We provide world's best tour experience. Happy Tour.</small></p>
                 </div>
 
-                <div className="row">
+                <div className="row g-md-3">
 
                     <div className="col-md-4 col-6">
                         <div className=" single-place-item">
@@ -64,8 +64,8 @@ const HomeTop = () => {
                     <div className="special-tour-text p-4">
                         <h5>From <span>$730</span></h5>
                         <h2>Princess World Cruise Vacation</h2>
-                        <p className="mb-4"> <i class="fas fa-map-marker-alt"></i> America  |  <i class="far fa-calendar-alt"></i> July 19th</p>
-                        <p className="mb-5"> <small>Curabitur nunc erat, consequat in erat ut, congue bibendum nulla. Suspendisse id pharetra lacus, et hendrerit mi <br /> quis leo elementum.</small></p>
+                        <p className="mb-4"> <i className="fas fa-map-marker-alt"></i> America  |  <i className="far fa-calendar-alt"></i> July 19th</p>
+                        <p className="mb-5"> <small> Princess become your home as you depart from Los Angeles on a world cruise, set to visit more countries than <br /> ever before. Sail to 50 destinations</small></p>
                         <Link to="/tours"><button className="signIn-btn">View Our Tours</button></Link>
                     </div>
                 </div>

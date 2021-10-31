@@ -20,7 +20,7 @@ const TourPackages = () => {
             <div className="row g-4 m-5 mt-0">
                 {
                     tours.map((tour=><Tour
-                        key={tour.key}
+                        key={tour._id}
                         cors={tour}>
                         </Tour>))
                 }

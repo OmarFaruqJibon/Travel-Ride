@@ -36,7 +36,7 @@ const AllBooking = () => {
            <div className="m-md-4">
                 <div className="row g-4">
                     {
-                        booking.map(user => <div key={user._id} className="col-4">
+                        booking.map(user => <div key={user._id} className="col-md-4 col-12">
                                 <div className="user-info">
                                 <p>Name: {user.UserName}</p>
                                 <p>Email: {user.UserEmail}</p>

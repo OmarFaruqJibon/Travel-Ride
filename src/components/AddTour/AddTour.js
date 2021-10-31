@@ -4,10 +4,8 @@ import useAuth from '../hooks/useAuth';
 
 const AddTour = () => {
     const {user} = useAuth();
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register,reset, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data =>{
-        console.log(data);
-
         fetch('https://rocky-headland-86423.herokuapp.com/addTour',{
             method: 'POST',
             headers:{
@@ -17,7 +15,11 @@ const AddTour = () => {
         })
         .then(res=>res.json())
         .then(result=>{
-            console.log(result);
+            // console.log(result);
+            if(result.insertedId){
+                alert('Tour Added Succesfully.');
+                reset();
+            }
         })
     }
 
@@ -38,6 +40,8 @@ const AddTour = () => {
                 <input {...register("duration" , { required: true })} placeholder="Duration" className="p-2 m-2 w-50"/>
                 <br />
                 <input {...register("rating" , { required: true })} placeholder="Rating" className="p-2 m-2 w-50"/>
+                <br />
+                <input {...register("address" , { required: true })} placeholder="Location" className="p-2 m-2 w-50"/>
                 <br />
                 {errors.exampleRequired && <span>This field is required</span>}
                 

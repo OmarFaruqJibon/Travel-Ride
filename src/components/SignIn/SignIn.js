@@ -31,14 +31,14 @@ const SignIn = () => {
 
 
     return (
-        <div className="app text-center ">
+        <div className="app text-center signIn-container">
             {error &&
                 <div>
                     <h5 className="text-danger"> Warning: {error}</h5>
                     <p className="text-success">Please Try again</p>
                 </div>
             }
-            <button className="btn btn-primary m-5 p-3" onClick={handleSignIn}>Sign In with google</button>
+            <button className="btn btn-primary m-5 p-3" onClick={handleSignIn}><img className="google-icon me-2" src={'https://i.postimg.cc/brD3mwFP/search.png'} alt="" />  Sign In with google</button>
         </div>
     );
 };

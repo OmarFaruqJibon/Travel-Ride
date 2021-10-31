@@ -9,11 +9,11 @@ const Pricing = () => {
                     <div className="pricing-container">
                         <h5 className="priceing-title">BASIC</h5>
                         <h1 className="price">50.20$</h1>
-                        <p className="priceing-items">Diagnostic Services</p>
-                        <p className="priceing-items">Professional Consultation</p>
-                        <p className="priceing-items">Tooth Implants</p>
-                        <p className="priceing-items">Surgical Extractions</p>
-                        <p className="priceing-items">Teeth Whitening</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Hotes Service</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Car Booking</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Good Food</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Safe Journey</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Flight Expance</p>
                         <button className="priceing-btn">Book Now</button>
                     </div>
                 </div>
@@ -21,11 +21,11 @@ const Pricing = () => {
                 <div className="pricing-container">
                         <h5 className="priceing-title">STANDARD</h5>
                         <h1 className="price">100.20$</h1>
-                        <p className="priceing-items">Diagnostic Services</p>
-                        <p className="priceing-items">Professional Consultation</p>
-                        <p className="priceing-items">Tooth Implants</p>
-                        <p className="priceing-items">Surgical Extractions</p>
-                        <p className="priceing-items">Teeth Whitening</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Hotes Service</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Car Booking</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Good Food</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Safe Journey</p>
+                        <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Flight Expance</p>
                         <button className="priceing-btn">Book Now</button>
                     </div>
                 </div>
@@ -33,12 +33,12 @@ const Pricing = () => {
                     <div className="pricing-container">
                             <h5 className="priceing-title">PREMIUM</h5>
                             <h1 className="price">200.20$</h1>
-                            <p className="priceing-items">Diagnostic Services</p>
-                            <p className="priceing-items">Professional Consultation</p>
-                            <p className="priceing-items">Tooth Implants</p>
-                            <p className="priceing-items">Surgical Extractions</p>
-                            <p className="priceing-items">Teeth Whitening</p>
-                            <button className="priceing-btn">Book </button>
+                            <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Hotes Service</p>
+                            <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Car Booking</p>
+                            <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Good Food</p>
+                            <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Safe Journey</p>
+                            <p className="priceing-items"><i className="fas cr-icon fa-check"></i> Flight Expance</p>
+                            <button className="priceing-btn">Book Now</button>
                     </div>
                 </div>
             </div>

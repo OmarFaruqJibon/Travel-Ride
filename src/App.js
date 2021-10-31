@@ -42,7 +42,7 @@ function App() {
           <Footer></Footer>
         </Route>
         <Route path="/contact">
-          <HeaderMain></HeaderMain>
+          {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <ContactUs></ContactUs>
           <Footer></Footer>
@@ -51,14 +51,14 @@ function App() {
 
 
         <Route path="/signIn">
-        <HeaderMain></HeaderMain>
+        {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <SignIn></SignIn>
           <Footer></Footer>
         </Route>
 
         <Route path="/tours">
-        <HeaderMain></HeaderMain>
+        {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <TourPackages></TourPackages>
           <Footer></Footer>
@@ -66,23 +66,18 @@ function App() {
 
 
         <PrivateRoute path="/admin">
-        <HeaderMain></HeaderMain>
+        {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <Admin></Admin>
           <Footer></Footer>
         </PrivateRoute>
 
         <PrivateRoute path="/tourDetails/:tourId">
-        <HeaderMain></HeaderMain>
+        {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <TourDetails></TourDetails>
           <Footer></Footer>
         </PrivateRoute>
-
-
-
-
-
 
       </Switch>
     </BrowserRouter>

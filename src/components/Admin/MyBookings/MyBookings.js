@@ -8,7 +8,7 @@ const MyBookings = () => {
     const [Bookings, setBookings] = useState([]);
 
     useEffect(()=>{
-        fetch('https://rocky-headland-86423.herokuapp.com/users')
+        fetch('https://rocky-headland-86423.herokuapp.com/bookings')
         .then(res=>res.json())
         .then(data=>{
             setBookings(data);
@@ -16,7 +16,7 @@ const MyBookings = () => {
     },[]);
 
     useEffect(()=>{
-        fetch('https://rocky-headland-86423.herokuapp.com/users')
+        fetch('https://rocky-headland-86423.herokuapp.com/bookings')
         .then(res=>res.json())
         .then(data=>{
             const booking = Bookings.filter(book =>
@@ -45,7 +45,7 @@ const handleDeleteBooking = id =>{
                                 <p>Name: {book.UserName}</p>
                                 <p>Email: {book.UserEmail}</p>
                                 <p>Booking ID: {book.bookingID}</p>
-                                <button onClick={()=>handleDeleteBooking(book._id)} className="btn btn-warning">Delete User</button>
+                                <button onClick={()=>handleDeleteBooking(book._id)} className="btn btn-warning">Delete Booking</button>
                                 </div>
                             </div>
                             

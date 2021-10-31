@@ -4,7 +4,7 @@ const AllBooking = () => {
     const [booking, setBooking] = useState([]);
     
     useEffect(()=>{
-        fetch('https://rocky-headland-86423.herokuapp.com/users')
+        fetch('https://rocky-headland-86423.herokuapp.com/bookings')
         .then(res=>res.json())
         .then(data=>{
             
@@ -16,7 +16,7 @@ const AllBooking = () => {
     const handleDeleteBooking = id => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
-            const url = `https://rocky-headland-86423.herokuapp.com/users/${id}`;
+            const url = `https://rocky-headland-86423.herokuapp.com/bookings/${id}`;
         fetch((url),{
             method: 'DELETE',
         })

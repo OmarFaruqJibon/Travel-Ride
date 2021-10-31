@@ -9,6 +9,7 @@ import Banner from './components/Header/Banner/Banner';
 import Navbar from './components/Header/Navbar/Navbar';
 import Home from './components/Home/Home/Home';
 import TourPackages from './components/Home/TourPackages/TourPackages';
+import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/SignIn/PrivateRoute/PrivateRoute';
 import SignIn from './components/SignIn/SignIn';
 import TourDetails from './components/TourDetails/TourDetails';
@@ -24,14 +25,12 @@ function App() {
           <Home></Home>
           <Footer></Footer>
         </Route>
-
         <Route path="/home">
           <Navbar></Navbar>
           <Banner></Banner>
           <Home></Home>
           <Footer></Footer>
         </Route>
-
         <Route path="/about">
           <Navbar></Navbar>
           <AboutUs></AboutUs>
@@ -47,31 +46,29 @@ function App() {
           <SignIn></SignIn>
           <Footer></Footer>
         </Route>
-
         <Route path="/tours">
           <Navbar></Navbar>
           <TourPackages></TourPackages>
           <Footer></Footer>
         </Route>
-
-
         <PrivateRoute path="/admin">
-        {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <Admin></Admin>
           <Footer></Footer>
         </PrivateRoute>
-
         <PrivateRoute path="/tourDetails/:tourId">
-        {/* <HeaderMain></HeaderMain> */}
           <Navbar></Navbar>
           <TourDetails></TourDetails>
           <Footer></Footer>
         </PrivateRoute>
-
+        <Route path="*">
+          <Navbar></Navbar>
+          <NotFound></NotFound>
+          <Footer></Footer>
+        </Route>
       </Switch>
     </BrowserRouter>
-
+    
     </AuthProvider>
   );
 }

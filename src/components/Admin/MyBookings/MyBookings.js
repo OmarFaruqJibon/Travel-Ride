@@ -3,8 +3,6 @@ import useAuth from '../../hooks/useAuth';
 import './MyBookings.css';
 const MyBookings = () => {
     const {user} = useAuth();
-    console.log('user: ',user.email);
-
     const [Bookings, setBookings] = useState([]);
 
     useEffect(()=>{
@@ -27,10 +25,20 @@ const MyBookings = () => {
     },[user.email]);
 
 
-    console.log('bookings : ',Bookings[0]?.UserEmail);
-
 const handleDeleteBooking = id =>{
-
+    const proceed = window.confirm('Are you sure you want to delete?');
+        if(proceed){
+            const url = `https://rocky-headland-86423.herokuapp.com/bookings/${id}`;
+        fetch((url),{
+            method: 'DELETE',
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            alert('DELETED SUCCESSFULLY');
+            const remainingUser = Bookings.filter(user => user._id !== id);
+            setBookings(remainingUser);
+        })
+        }
 }
     return (
         <div>
@@ -44,7 +52,7 @@ const handleDeleteBooking = id =>{
                                 <p>Name: {book.UserName}</p>
                                 <p>Email: {book.UserEmail}</p>
                                 <p>Booking ID: {book.bookingID}</p>
-                                <button onClick={()=>handleDeleteBooking(book._id)} className="btn btn-warning">Delete Booking</button>
+                                <button onClick={()=>handleDeleteBooking(book._id)} className="btn signIn-btn">Delete Booking</button>
                                 </div>
                             </div>
                             

@@ -25,7 +25,6 @@ const TourDetails = () => {
 
 // user information-------------------------------------------
     const onSubmit = data =>{
-        console.log(data);
         data.bookingID = tourId;
         fetch('https://rocky-headland-86423.herokuapp.com/bookings',{
             method: 'POST',

@@ -15,7 +15,6 @@ const AddTour = () => {
         })
         .then(res=>res.json())
         .then(result=>{
-            // console.log(result);
             if(result.insertedId){
                 alert('Tour Added Succesfully.');
                 reset();

@@ -68,7 +68,6 @@ function App() {
         </Route>
       </Switch>
     </BrowserRouter>
-    
     </AuthProvider>
   );
 }

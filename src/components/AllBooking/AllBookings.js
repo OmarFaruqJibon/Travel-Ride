@@ -7,11 +7,9 @@ const AllBooking = () => {
         fetch('https://rocky-headland-86423.herokuapp.com/bookings')
         .then(res=>res.json())
         .then(data=>{
-            
             setBooking(data);
         })
     },[]);
-    
 
     const handleDeleteBooking = id => {
         const proceed = window.confirm('Are you sure you want to delete?');

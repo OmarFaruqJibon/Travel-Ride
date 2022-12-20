@@ -13,7 +13,7 @@ const TourDetails = () => {
     const { register,reset, handleSubmit, formState: { errors } } = useForm();
 
     // booking information-------------------------------------------
-    const url = `https://rocky-headland-86423.herokuapp.com/tourDetails/${tourId}`;
+    const url = `https://travel-ride-server.onrender.com/tourDetails/${tourId}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
@@ -26,7 +26,7 @@ const TourDetails = () => {
 // user information-------------------------------------------
     const onSubmit = data =>{
         data.bookingID = tourId;
-        fetch('https://rocky-headland-86423.herokuapp.com/bookings',{
+        fetch('https://travel-ride-server.onrender.com/bookings',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

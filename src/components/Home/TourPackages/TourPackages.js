@@ -5,7 +5,7 @@ import './TourPackages.css';
 const TourPackages = () => {
     const [tours, settours] = useState([]);
     useEffect( () => {
-        fetch('https://rocky-headland-86423.herokuapp.com/addTour')
+        fetch('https://travel-ride-server.onrender.com/addTour')
         .then(res=>res.json())
         .then(data=>settours(data));
     },[]);

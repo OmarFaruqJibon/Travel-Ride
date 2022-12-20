@@ -6,7 +6,7 @@ const AddTour = () => {
     const {user} = useAuth();
     const { register,reset, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data =>{
-        fetch('https://rocky-headland-86423.herokuapp.com/addTour',{
+        fetch('https://travel-ride-server.onrender.com/addTour',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
@@ -21,7 +21,7 @@ const AddTour = () => {
             }
         })
     }
-
+https://travel-ride-server.onrender.com/
     return (
         <div className="container mb-5 text-center mt-5">
             <h4 className="fw-bold">Add a new Tour</h4>
